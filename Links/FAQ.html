@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+  
+        }
+
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-section h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007BFF;
+        }
+
+        .faq {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .question h2 {
+            cursor: pointer;
+            background: #007BFF;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .question h2:hover {
+            background: #0056b3;
+        }
+
+        .question p {
+            display: none;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .question.active p {
+            display: block;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            .faq-section {
+                padding: 15px;
+            }
+
+            .question h2, .question p {
+                padding: 10px;
+            }
+        }
+        footer {
+            margin-top: 10px; 
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .footer-content a{
+            text-decoration: none;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="faq-section">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq">
+            <div class="question">
+                <h2>What services do you offer?</h2>
+                <p>I offer a range of web development services, including website design and redesign, performance optimization, SEO, e-commerce solutions, and ongoing website maintenance. Whether you need a new website from scratch or improvements to an existing one, I can help.</p>
+            </div>
+            <div class="question">
+                <h2>What is your design process?</h2>
+                <p>My design process begins with a consultation to understand your goals and requirements. I then create a detailed project plan, including wireframes and design prototypes. Once you approve the design, I move on to development, testing, and finally, deployment. Throughout the process, I maintain open communication to ensure your vision is realized.</p>
+            </div>
+            <div class="question">
+                <h2>How long does it take to build a website?</h2>
+                <p>The timeline for building a website varies depending on the project's complexity and scope. A simple website can take a few weeks, while more complex projects may take several months. I will provide a detailed timeline during our initial consultation.</p>
+            </div>
+            <div class="question">
+                <h2>How much do your services cost?</h2>
+                <p>The cost of my services depends on the specific requirements of your project. I offer customized quotes based on the scope of work, and I am happy to discuss your budget and find a solution that works for you. Please contact me for a detailed quote.</p>
+            </div>
+            <div class="question">
+                <h2>Do you provide ongoing maintenance and support?</h2>
+                <p>Yes, I offer ongoing maintenance and support to ensure your website remains up-to-date, secure, and running smoothly. This can include updates, backups, security checks, and performance monitoring.</p>
+            </div>
+            <div class="question">
+                <h2>Can you help with SEO and digital marketing?</h2>
+                <p>Absolutely. I provide basic SEO services to help your website rank higher in search engine results. For more comprehensive digital marketing services, I can either provide solutions or recommend trusted partners who specialize in these areas.</p>
+            </div>
+            <div class="question">
+                <h2>Do you offer e-commerce solutions?</h2>
+                <p>Yes, I can help you set up an e-commerce website, including product listings, payment gateways, and inventory management. I work with various platforms such as WooCommerce, Shopify, and Magento to create a seamless shopping experience for your customers.</p>
+            </div>
+            <div class="question">
+                <h2>Will my website be mobile-friendly?</h2>
+                <p>All the websites I design are fully responsive and mobile-friendly, ensuring they look and function well on all devices, including smartphones and tablets.</p>
+            </div>
+            <div class="question">
+                <h2>Can you redesign my existing website?</h2>
+                <p>Yes, I specialize in website redesigns. Whether you want a complete overhaul or minor improvements, I can update your site to meet modern design standards and enhance user experience.</p>
+            </div>
+            <div class="question">
+                <h2>How do we get started?</h2>
+                <p>Getting started is easy! Simply contact me via the contact form on my website, and we can schedule an initial consultation to discuss your project in detail. I look forward to helping you achieve your online goals.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; <a href="http://127.0.0.1:3002/index.html">RejuanWebCraft.</a> All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelectorAll('.question h2').forEach(question => {
+            question.addEventListener('click', () => {
+                question.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
